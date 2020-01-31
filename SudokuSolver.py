@@ -76,7 +76,6 @@ while Hit == 0 :
     for line in Map:
         missing_elements = Find_Missing_Horizontal(line)
         if len(missing_elements[0]) !=0:
-            #print(missing_elements[1])
             for col in missing_elements[0]:
                 probability[row][col]= Find_Missing_Verical(col,missing_elements[1].copy()).copy()
                 if len(probability[row][col]) == 1:
